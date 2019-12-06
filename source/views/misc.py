@@ -35,7 +35,7 @@ class TextStatus(Resource):
         text = request.json.get('text', '???')
         
         session = Session()
-        status_row = Text(value=status)
+        status_row = Text(value=text)
         session.add(status_row)
 
         session.commit()
